@@ -6,6 +6,8 @@ import Layout from "./Layout";
 import About from "./About";
 import axios from "axios";
 
+import { API_KEY } from "../utils/API";
+
 const Welcome = () => {
   const { searchState, setIsLoading, properties, setProperties } =
     useContext(SearchContext);
@@ -39,7 +41,7 @@ const Welcome = () => {
       new_homes: selectedHomes,
     },
     headers: {
-      "X-RapidAPI-Key": "cdd2a8fcf0msh94e0092a7ce1dcep10ac09jsn1bbbd22af89b",
+      "X-RapidAPI-Key": { API_KEY },
       "X-RapidAPI-Host": "zoopla.p.rapidapi.com",
       Accept: "application/json",
       "Content-Type": "application/json",
